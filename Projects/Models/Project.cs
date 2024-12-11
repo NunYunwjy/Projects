@@ -15,6 +15,7 @@ namespace Projects.Models
         public string requirements { get; set; }
         public DateTime begintime { get; set; }
         public DateTime endtime { get; set; }
+        public DateTime createtime { get; } = DateTime.Now;//只读，直接获取当前时间
         public int status { get; set; }//-1表示待审核，0表示已审核未通过，1表示已审核通过
         public string? level { get; set; }//竞赛、大创
         public string? major { get; set; }//科研项目、毕业论文、大创、找帮手
@@ -22,7 +23,7 @@ namespace Projects.Models
         public int? student_id { get; set; }
         public int? admin_id { get; set; }
         public string? comment { get; set; }//审核意见
-        public DateTime? aduittime { get; set; }//审核时间
+        public DateTime? aduittime { get; } = DateTime.Now;//只读，直接获取当前时间//审核时间
 
         // 外键关系
         [ForeignKey("category")]

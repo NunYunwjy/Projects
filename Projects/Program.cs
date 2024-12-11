@@ -5,6 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddMvc();
+builder.Services.AddControllers();
 builder.Services.AddDbContext<ProjectsContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ProjectsContext") ?? throw new InvalidOperationException("Connection string 'ProjectsContext' not found.")));
 
@@ -28,7 +30,6 @@ app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();
 
-app.Run();
-
-builder.Services.AddControllers();
 app.MapControllers();
+
+app.Run();
