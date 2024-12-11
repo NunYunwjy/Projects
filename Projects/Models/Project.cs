@@ -15,7 +15,6 @@ namespace Projects.Models
         public string requirements { get; set; }
         public DateTime begintime { get; set; }
         public DateTime endtime { get; set; }
-        public DateTime createtime { get; } = DateTime.Now;//只读，直接获取当前时间
         public int status { get; set; }//-1表示待审核，0表示已审核未通过，1表示已审核通过
         public string? level { get; set; }//竞赛、大创
         public string? major { get; set; }//科研项目、毕业论文、大创、找帮手

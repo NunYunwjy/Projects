@@ -11,13 +11,13 @@ namespace Projects.Models
 
         public string name { get; set; }
         public bool status { get; set; }
-        public string description { get; set; }
+        public string? description { get; set; }
 
         [ForeignKey("parentCategory")]
         public int? parentcategory_id { get; set; }
         public virtual Category parentCategory { get; set; }
 
-        public int admin_id { get; set; }
+        public int? admin_id { get; set; }
 
     }
 }
