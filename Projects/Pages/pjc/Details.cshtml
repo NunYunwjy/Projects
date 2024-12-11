@@ -1,0 +1,115 @@
+﻿@page
+@model Projects.Pages.pjc.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.requirements)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.requirements)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.begintime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.begintime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.endtime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.endtime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.level)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.level)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.major)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.major)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.teacher_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.teacher_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.student_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.student_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.admin_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.admin_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.comment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.comment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.aduittime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.aduittime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Project.category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Project.category.category_id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Project.project_id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

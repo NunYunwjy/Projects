@@ -1,0 +1,126 @@
+﻿@page
+@model Projects.Pages.pjc.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].requirements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].begintime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].endtime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].major)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].teacher_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].student_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].admin_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].comment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].aduittime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Project[0].category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Project) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.requirements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.begintime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.endtime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.major)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teacher_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.student_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.admin_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.aduittime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.category.category_id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.project_id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.project_id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.project_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
