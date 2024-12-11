@@ -19,9 +19,9 @@ namespace Projects.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     name = table.Column<string>(type: "TEXT", nullable: false),
                     status = table.Column<bool>(type: "INTEGER", nullable: false),
-                    description = table.Column<string>(type: "TEXT", nullable: false),
+                    description = table.Column<string>(type: "TEXT", nullable: true),
                     parentcategory_id = table.Column<int>(type: "INTEGER", nullable: true),
-                    admin_id = table.Column<int>(type: "INTEGER", nullable: false)
+                    admin_id = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -53,7 +53,6 @@ namespace Projects.Migrations
                     student_id = table.Column<int>(type: "INTEGER", nullable: true),
                     admin_id = table.Column<int>(type: "INTEGER", nullable: true),
                     comment = table.Column<string>(type: "TEXT", nullable: true),
-                    aduittime = table.Column<DateTime>(type: "TEXT", nullable: true),
                     category_id = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

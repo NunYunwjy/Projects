@@ -14,7 +14,7 @@ namespace Projects.Models
         public string? description { get; set; }
 
         [ForeignKey("parentCategory")]
-        public int? parentcategory_id { get; set; }
+        public int? parentcategory_id { get; private set; }
         public virtual Category parentCategory { get; set; }
 
         public int? admin_id { get; set; }

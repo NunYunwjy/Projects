@@ -11,7 +11,7 @@ using Projects.Data;
 namespace Projects.Migrations
 {
     [DbContext(typeof(ProjectsContext))]
-    [Migration("20241211025228_InitialCreate")]
+    [Migration("20241211084523_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -26,11 +26,10 @@ namespace Projects.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("admin_id")
+                    b.Property<int?>("admin_id")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("description")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("name")
@@ -58,9 +57,6 @@ namespace Projects.Migrations
 
                     b.Property<int?>("admin_id")
                         .HasColumnType("INTEGER");
-
-                    b.Property<DateTime?>("aduittime")
-                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("begintime")
                         .HasColumnType("TEXT");
